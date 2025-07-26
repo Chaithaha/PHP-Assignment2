@@ -26,7 +26,6 @@ Php/
 │   ├── users.php            # Users placeholder
 │   ├── logout.php           # Logout (redirects to dashboard)
 │   └── styles.css           # Admin styling
-├── index.php                # Public homepage
 ├── game.php                 # Individual game page
 ├── styles.css               # Public styling
 └── gamedb.sql              # Database schema
