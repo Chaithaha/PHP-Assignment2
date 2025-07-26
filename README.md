@@ -1,22 +1,9 @@
-# Game CMS - PHP Content Management System
+# Games Management System
 
-A simple Content Management System (CMS) for managing games, built with PHP and MySQL. This project demonstrates full CRUD (Create, Read, Update, Delete) operations for a game database.
+A streamlined admin panel built with PHP and MySQL for managing video game entries. This system provides administrators with a complete CRUD (Create, Read, Update, Delete) interface to manage game information including titles, developers, release dates, and descriptions. The focus is on simplicity and efficiency, offering all necessary tools for game database management in one centralized admin interface.
 
-## Features
-
-### Public Website
-- **Homepage**: Simple list of all games
-- **Game Details**: Individual game pages
-- **Clean Design**: Simple, readable interface
-
-### Admin Panel
-- **Dashboard**: Quick access to management functions
-- **Game Management**: Full CRUD operations for games
-  - Add new games
-  - Edit existing games
-  - Delete games with confirmation
-  - View game details
-- **No Authentication**: Direct access to admin panel (for development)
+## Setup and Requirements
+The system runs on a XAMPP environment with PHP and MySQL. To get started, import the included `gamedb.sql` file to set up your database structure. Configure your database connection by creating a `database.php` file in the `admin/includes` directory based on the provided example. Access the admin panel through your local server at `http://localhost/Php-Proj/admin/`.
 
 ## Project Structure
 
@@ -52,7 +39,6 @@ Php/
 - **platforms**: Gaming platforms (PC, PlayStation, Xbox, etc.)
 - **reviews**: Game reviews (rating, headline, text, date)
 - **game_platforms**: Many-to-many relationship between games and platforms
-- **users**: User accounts (for future authentication)
 
 ### Sample Data
 The database comes pre-populated with:
