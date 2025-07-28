@@ -16,7 +16,7 @@ include( 'includes/header.php' );
   </li>
   <li>
     <a href="reviews.php">
-      Manage Reviews (Placeholder)
+      Manage Reviews
     </a>
   </li>
   <li>
