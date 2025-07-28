@@ -1,11 +1,13 @@
 <?php
-
+session_start();
+if (!isset($_SESSION['admin_id'])) {
+    header('Location: login.php');
+    exit;
+}
 include( 'includes/database.php' );
 include( 'includes/config.php' );
 include( 'includes/functions.php' );
-
 include( 'includes/header.php' );
-
 ?>
 
 <ul id="dashboard">

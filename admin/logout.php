@@ -1,8 +1,8 @@
 <?php
-
-include( 'includes/config.php' );
-
-// Since no authentication, just redirect to dashboard
-header( 'Location: dashboard.php' );
-
-?> 
+// admin/logout.php
+session_start();
+session_unset();
+session_destroy();
+header('Location: login.php');
+exit;
+?>

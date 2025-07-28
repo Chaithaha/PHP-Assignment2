@@ -40,7 +40,11 @@ $result = mysqli_query( $connect, $query );
       <td align="center"><?php echo $record['game_id']; ?></td>
       <td align="left">
         <?php echo htmlentities( $record['title'] ); ?>
-        <small><?php echo htmlentities( substr($record['description'], 0, 100) ); ?>...</small>
+        <small><?php 
+          $preview = strip_tags(substr($record['description'], 0, 100), '<b><i><strong><em>');
+          $preview = str_replace(["\r", "\n"], ' ', $preview); // Remove newlines
+          echo $preview . '...'; 
+        ?></small>
       </td>
       <td align="left"><?php echo htmlentities( $record['developer'] ); ?></td>
       <td align="center" style="white-space: nowrap;"><?php echo htmlentities( $record['release_date'] ); ?></td>

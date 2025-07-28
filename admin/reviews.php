@@ -43,7 +43,11 @@ $result = mysqli_query( $connect, $query );
       <td align="left"><?php echo htmlentities( $record['game_title'] ); ?></td>
       <td align="left">
         <?php echo htmlentities( $record['headline'] ); ?>
-        <small><?php echo htmlentities( substr($record['text'], 0, 100) ); ?>...</small>
+        <small><?php 
+          $preview = strip_tags(substr($record['text'], 0, 100), '<b><i><strong><em>');
+          $preview = str_replace(["\r", "\n"], ' ', $preview); // Remove newlines
+          echo $preview . '...'; 
+        ?></small>
       </td>
       <td align="center"><?php echo $record['rating']; ?>/10</td>
       <td align="center" style="white-space: nowrap;"><?php echo htmlentities( date('Y-m-d', strtotime($record['date'])) ); ?></td>
