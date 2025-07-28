@@ -32,6 +32,13 @@ CREATE TABLE game_platforms (
     FOREIGN KEY (platform_id) REFERENCES platforms(platform_id) ON DELETE CASCADE
 );
 
+CREATE TABLE IF NOT EXISTS admins (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+
+
 
 INSERT INTO platforms (name) VALUES
 ('PC'),
